@@ -1,0 +1,102 @@
+# ============================================================
+# ALIGATOR — .htaccess v10 DEFINITIVO
+# ============================================================
+
+Options -Indexes
+Options -MultiViews
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # ── Blog post ────────────────────────────────────────────
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^blog/(.+)$ blog/post.php?slug=$1 [L,QSA]
+
+  # ── Blog listagem ────────────────────────────────────────
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^blog/?$ blog/index.php [L,QSA]
+
+  # ── Páginas de serviço individuais ───────────────────────
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^sistemas/?$ servico.php?slug=sistemas [L,QSA]
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^automacao/?$ servico.php?slug=automacao [L,QSA]
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^growth/?$ servico.php?slug=growth [L,QSA]
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^seo-tecnico/?$ servico.php?slug=seo [L,QSA]
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^solucoes-eventos/?$ servico.php?slug=eventos [L,QSA]
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^mentoria-estrategica/?$ servico.php?slug=mentoria [L,QSA]
+
+  # ── Páginas principais ────────────────────────────────────
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^sobre/?$ sobre.php [L,QSA]
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^solucoes/?$ solucoes.php [L,QSA]
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^mentoria/?$ mentoria.php [L,QSA]
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^contato/?$ contato.php [L,QSA]
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^obrigado/?$ obrigado.php [L,QSA]
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^politica-de-privacidade/?$ pagina.php?slug=politica-de-privacidade [L,QSA]
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^termos-de-uso/?$ pagina.php?slug=termos-de-uso [L,QSA]
+
+  # ── Sitemap / llms ────────────────────────────────────────
+  RewriteRule ^sitemap\.xml$ sitemap.php [L]
+  RewriteRule ^llms\.txt$    llms.php [L]
+
+  # ── Segurança ─────────────────────────────────────────────
+  RewriteRule ^config\.php$ - [F,L]
+
+  # ── 404 catch-all ─────────────────────────────────────────
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ 404.php [L]
+</IfModule>
+
+ErrorDocument 404 /404.php
+ErrorDocument 500 /404.php
+
+<FilesMatch "\.(sql|log|env|bak|sh|git)$">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+<Files "config.php">
+  Order allow,deny
+  Deny from all
+</Files>
+
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType image/avif .avif
+  AddType application/font-woff2 .woff2
+</IfModule>
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript
+</IfModule>
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/png  "access plus 1 month"
+  ExpiresByType image/webp "access plus 1 month"
+  ExpiresByType text/css   "access plus 1 week"
+  ExpiresByType text/javascript "access plus 1 week"
+</IfModule>

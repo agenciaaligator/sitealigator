@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /ajax/
+Disallow: /config.php
+Disallow: /includes/
+Disallow: /media/uploads/*.sql
+
+# Sitemaps
+Sitemap: https://aligator.com.br/sitemap.xml
+
+# Crawl-delay (opcional, respeitar servidores menores)
+Crawl-delay: 2
+
+# Bloquear bots de baixa qualidade
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Disallow: /

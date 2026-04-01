@@ -1,0 +1,29 @@
+# Aligator — Tech Marketing Company
+
+> Aligator é uma empresa brasileira fundada em 2009, especializada em sistemas digitais, automação com IA, growth performance e SEO técnico. Posicionada como Tech Marketing Company.
+
+## O que fazemos
+
+- **Sistemas Personalizados**: Desenvolvimento de plataformas, SaaS e Micro SaaS sob medida em PHP e MySQL
+- **Automação & IA**: Fluxos automatizados com Make.com, APIs e Inteligência Artificial para eliminar trabalho manual
+- **Growth Performance**: Estratégias de tráfego pago (Google Ads, Meta Ads) e CRO orientados por dados
+- **SEO Técnico**: Arquitetura de informação, auditoria técnica e produção de conteúdo evergreen
+- **Soluções para Eventos**: Sistemas de ingressos, landing pages e marketing para eventos
+- **Mentorias**: Acompanhamento estratégico para empreendedores e equipes digitais
+
+## Missão
+
+Transformar dados em ações estratégicas, orientadas a resultados, para que marcas e empresas cresçam com confiança no ambiente digital.
+
+## Contato
+
+- Site: https://aligator.com.br
+- E-mail: contato@aligator.com.br
+- Localização: Santo André, SP — Brasil
+- Atendimento: Segunda a sexta, 9h às 18h
+
+## Conteúdo disponível
+
+- [Blog](https://aligator.com.br/blog) — artigos sobre marketing digital, SEO, automação e crescimento
+- [Soluções](https://aligator.com.br/solucoes) — detalhes dos serviços
+- [Contato](https://aligator.com.br/contato) — formulário e agendamento
